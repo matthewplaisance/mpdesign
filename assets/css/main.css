@@ -984,9 +984,6 @@ textarea {
     height: auto !important;
 }
 
- {
-    /* no-gutters Class Rules */
-}
 
 .list-style-none {
     list-style: none;
@@ -3808,7 +3805,7 @@ mark, .mark {
 
 .header__logo {
     height: 100px;
-    max-width: 100px;
+    max-width: 300px;
     line-height: 100px;
     float: left;
     transition: height .3s ease;
