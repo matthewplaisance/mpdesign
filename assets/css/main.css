@@ -3752,10 +3752,24 @@ mark, .mark {
 }
 
 @media (min-width: 992px) {
+    /* Flex so the container takes the logo's height (normal + shrink); without
+       an in-flow child it would collapse to 0 and the absolutely-centered nav
+       would clip above the header. */
+    .header .container {
+        display: flex;
+        align-items: center;
+    }
+
     .header .consult-nav {
         text-align: center;
         padding: 0;
         float: none;
+        /* Absolutely center the section links across the full header width,
+           independent of the left-floated logo's width. */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
