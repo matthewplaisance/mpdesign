@@ -3645,29 +3645,32 @@ mark, .mark {
 }
 
 .footer__main {
-    padding: 80px 15px 50px;
+    padding: 30px 15px 15px;
 }
 
 @media (min-width: 768px) {
     .footer__main {
-        padding: 80px 30px 40px;
+        padding: 35px 30px 15px;
     }
 }
 
 @media (min-width: 1200px) {
     .footer__main {
-        padding: 140px 75px 60px;
+        padding: 45px 75px 20px;
     }
 }
 
 .footer__copyright {
     text-align: center;
-    padding: 15px 0;
+    padding: 18px 0;
     border-top: 1px solid rgba(235, 235, 235, .1);
+    font-size: 18px;
+    font-weight: 700;
+    color: #f7f7f7;
 }
 
 .footer__item {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
 
 .footer__item .consult_logo {
