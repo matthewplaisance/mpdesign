@@ -2,9 +2,9 @@
 <html>
 
 <head>
-	<title>Project Detail</title>
+	<title>Plaisance Design</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<!-- Fonts-->
@@ -28,7 +28,7 @@
 		<!-- header -->
 		<header class="header header__style-02">
 			<div class="container">
-				<div class="header__logo"><a href="index.html"><img src="assets/img/logo3.png" alt="" /></a></div>
+				<div class="header__logo"><a href="index.html" class="header__logo-link">Plaisance Design ATX</a></div>
 				<div class="header__toogleGroup">
 					<div class="search-form">
 						<div class="search-form__toggle"><i class="ti-search"></i></div>
@@ -50,15 +50,15 @@
 
 					<!-- consult-menu -->
 					<ul class="consult-menu">
-						<li><a id="home-nav" href="./index.html">Home</a>
+						<li><a id="home-nav" href="./index.html#home-sect">Home</a>
 						</li>
-						<li><a id="abt-nav">about</a>
+						<li><a id="abt-nav" href="./index.html#abt-sect">about</a>
 						</li>
-						<li><a id="work-nav">work</a>
+						<li><a id="work-nav" href="./index.html#work-sect">work</a>
 						</li>
-						<li><a id="refs-nav">references</a>
+						<li><a id="refs-nav" href="./index.html#refs-sect">references</a>
 						</li>
-						<li><a id="contact-nav">contact</a>
+						<li><a id="contact-nav" href="./index.html#contact-sect">contact</a>
 						</li>
 					</ul><!-- consult-menu -->
 
@@ -74,11 +74,11 @@
 
 				<!-- carousel__element owl-carousel -->
 				<div class="carousel__element owl-carousel"
-					data-options='{"items":1,"loop":true,"dots":false,"nav":false,"margin":0, "autoplay": true, "autoplayTimeout": 3000}'>
-					<div class="slider__item" id='carousel-img1' style="background-image: url('assets/img/job-kitchen/mainbefore.jpg');">
+					data-options='{"items":1,"loop":true,"dots":false,"nav":false,"margin":0, "autoplay": true, "autoplayTimeout": 6000}'>
+					<div class="slider__item" id='carousel-img1'>
 						
 					</div>
-					<div class="slider__item" id='carousel-img2' style="background-image: url('assets/img//job-kitchen/mainafter.jpg');">
+					<div class="slider__item" id='carousel-img2'>
 						
 					</div>
 				</div><!-- End / carousel__element owl-carousel -->
@@ -88,11 +88,9 @@
 
 						<!-- social-01 -->
 						<div class="social-01 social-01__style-02">
-							<nav class="social-01__navSocial"><a class="social-01__item" href="#"><i
-										class="fa fa-facebook"></i></a><a class="social-01__item" href="#"><i
-										class="fa fa-skype"></i></a><a class="social-01__item" href="#"><i
-										class="fa fa-twitter"></i></a><a class="social-01__item" href="#"><i
-										class="fa fa-instagram"></i></a>
+							<nav class="social-01__navSocial"><a class="social-01__item"
+										href="https://www.instagram.com/mpdesignbuildatx/" target="_blank"
+										rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
 							</nav>
 						</div><!-- End / social-01 -->
 
@@ -102,7 +100,7 @@
 									<div class="row">
 										<div
 											class="col-xl-11 offset-0 offset-sm-0 offset-md-0 offset-lg-0 offset-xl-1 ">
-											<h1>Kitchen Remodel</h1>
+											<h1 id="project-title"></h1>
 											<p class="text">Mauris lacinia venenatis dolor sit amet viverra. Integer
 												malesuada nulla neque. Sed rutrum ligula eu sagittis volutpat. Aliquam
 												erat volutpat. Praesent mattis non nulla eget tempus. Orci varius
@@ -114,7 +112,7 @@
 													<!-- infobox -->
 													<div class="infobox">
 														<h2 class="infobox__title"><a href="#">Client</a></h2>
-														<div class="infobox__description">Brumely</div>
+														<div class="infobox__description" id="project-client"></div>
 													</div><!-- End / infobox -->
 
 												</div>
@@ -123,7 +121,7 @@
 													<!-- infobox -->
 													<div class="infobox">
 														<h2 class="infobox__title"><a href="#">date</a></h2>
-														<div class="infobox__description">21 August, 2022 - December 2022</div>
+														<div class="infobox__description" id="project-date"></div>
 													</div><!-- End / infobox -->
 
 												</div>
@@ -133,8 +131,7 @@
 													<!-- infobox -->
 													<div class="infobox">
 														<h2 class="infobox__title"><a href="#">Project type</a></h2>
-														<div class="infobox__description">Kitchen Remodel
-														</div>
+														<div class="infobox__description" id="project-type"></div>
 													</div><!-- End / infobox -->
 
 												</div>
@@ -143,11 +140,11 @@
 									</div>
 									<div class="row">
 										<div class="col-lg-6 ">
-											<div class="image-full"><img id="img1" src="assets/img/job-kitchen/IMG_9457.JPG" alt="">
+											<div class="image-full"><img id="img1" src="" alt="">
 											</div>
 										</div>
 										<div class="col-lg-6 ">
-											<div class="image-full"><img id="img2" src="assets/img/blogs/detail/3.jpg" alt="">
+											<div class="image-full"><img id="img2" src="" alt="">
 											</div>
 										</div>
 									</div>
@@ -160,8 +157,7 @@
 											</p>
 										</div>
 									</div>
-									<div class="image-full"><img src="assets/img/job-kitchen/IMG_9457.JPG" alt=""></div>
-									<div class="row">
+																		<div class="row">
 										<div
 											class="col-xl-11 offset-0 offset-sm-0 offset-md-0 offset-lg-0 offset-xl-1 ">
 											<p class="text">Maecenas lorem ex, euismod eget pulvinar non, facilisis ut
@@ -171,8 +167,7 @@
 												lorem euismod, vel iaculis fel</p>
 										</div>
 									</div>
-									<div class="image-full"><img src="assets/img/job-kitchen/IMG_9441.JPG" alt=""></div>
-									<div class="row">
+																		<div class="row">
 										<div
 											class="col-xl-11 offset-0 offset-sm-0 offset-md-0 offset-lg-0 offset-xl-1 ">
 											<p class="text">Integer placerat ullamcorper urna nec rhoncus. Sed velit

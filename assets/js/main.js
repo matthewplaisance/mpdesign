@@ -33,18 +33,29 @@ window.windowWidth = window.innerWidth;
  * owlCarousel
  */
 $('.carousel__element').each(function() {
-	var self = $(this),
-		optData = eval('(' + self.attr('data-options') + ')'),
+	var self    = $(this),
+		optData = {},
 		optDefault = {
-			items: 1,
-			nav: true,
-			dot: true,
-			loop: true
-		},
-		options = $.extend(optDefault, optData);
+		  items: 1,
+		  nav: false,
+		  dots: true,
+		  loop: true,
+		  rtl: false,
+		  smartSpeed: 900,        // slower, smoother slide transition (was ~250ms default)
+		  autoplaySpeed: 1200,    // ease autoplay movement so images glide instead of snap
+		  autoplayHoverPause: true // stop auto-rotation while the user is reading/hovering
+		};
 
-self.owlCarousel(options);
-});
+	try {
+		optData = JSON.parse(self.attr('data-options') || '{}');
+	} catch (e) {
+		console.warn('Invalid data-options on carousel:', self.attr('data-options'));
+	}
+
+	var options = $.extend({}, optDefault, optData);
+
+	self.owlCarousel(options);
+  });
 
 var selectors = [
 	'iframe[src*="player.vimeo.com"]',
@@ -225,7 +236,7 @@ function work() {
 		$('.grid-item', workWrapper).reCalWidth();
 	});
 }
-work();
+//work();
 
 $('.js-post-effect').each(function() {
 	var contentHeight = $(this).find('.post-02__content').height() + 30;
@@ -337,6 +348,17 @@ if ($(el).hasClass('open')) {
             $(el).removeClass('open');
         }
     });
+});
+
+/**
+ * Search submit — filter the work grid by project title / category.
+ * Works from any page: navigate to the homepage with a ?search= query that
+ * index.js reads on load to filter the grid (no backend needed).
+ */
+$('.search-form form').on('submit', function(event) {
+	event.preventDefault();
+	var q = ($(this).find('input').val() || '').trim();
+	window.location.href = q ? ('index.html?search=' + encodeURIComponent(q)) : 'index.html';
 });
 
 function slider() {

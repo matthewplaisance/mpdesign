@@ -2,9 +2,9 @@
 <html>
 
 <head>
-	<title>Home</title>
+	<title>Plaisance Design</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<!-- Fonts-->
@@ -14,9 +14,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap4/bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendors/magnific-popup/magnific-popup.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendors/owl.carousel/owl.carousel.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendors/_jquery/jquery.min.css">
-	<!-- <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap4/bootstrap-grid.min.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap4/bootstrap-grid.min.css"> -->
 	<!-- App & fonts-->
 	<link rel="stylesheet" type="text/css"
 		href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&amp;amp;subset=latin-ext">
@@ -30,7 +27,7 @@
 		<!-- header -->
 		<header class="header header__style-02">
 			<div class="container">
-				<div class="header__logo"><a href="index.html"><img src="assets/img/logo3.png" alt="" /></a></div>
+				<div class="header__logo"><a href="index.html" class="header__logo-link">Plaisance Design ATX</a></div>
 				<div class="header__toogleGroup">
 					<div class="search-form">
 						<div class="search-form__toggle"><i class="ti-search"></i></div>
@@ -54,10 +51,11 @@
 					<ul class="consult-menu">
 						<li><a id="home-nav">Home</a>
 						</li>
-						<li><a id="abt-nav">about</a>
-						</li>
 						<li><a id="work-nav">work</a>
 						</li>
+						<li><a id="abt-nav">about</a>
+						</li>
+						
 						<li><a id="refs-nav">references</a>
 						</li>
 						<li><a id="contact-nav">contact</a>
@@ -75,11 +73,10 @@
 
 			<!-- slide show work -->
 			<div class="slider">
-
 				<!-- carousel__element owl-carousel -->
 				<div class="carousel__element owl-carousel"
-					data-options='{"items":1,"loop":true,"dots":false,"nav":false,"margin":0, "autoplay": true, "autoplayTimeout": 3000}'>
-					<div class="slider__item" style="background-image: url('assets/img/job-longCab/main.jpg');">
+					data-options='{"items":1,"loop":true,"dots":false,"nav":false,"margin":0, "autoplay": true, "autoplayTimeout": 7000}'>
+					<div class="slider__item" style="background-image: url('assets/img/projects/longcab/index.jpg');">
 						<div class="md-tb">
 							<div class="md-tb__cell">
 								<div class="slider__content">
@@ -92,7 +89,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="slider__item" style="background-image: url('assets/img/job-kitchen/main.JPG');">
+					<div class="slider__item" style="background-image: url('assets/img/projects/kitchen1/index.jpg');">
 						<div class="md-tb">
 							<div class="md-tb__cell">
 								<div class="slider__content">
@@ -106,12 +103,11 @@
 						</div>
 					</div>
 				</div><!-- End / carousel__element owl-carousel -->
-
 			</div><!-- End / slider -->
 
 
 			<!-- home -->
-			<section class="md-section" style="background-color:#f7f7f7;padding:0;">
+			<section class="md-section" style="background-color:#f7f7f7;padding:60px 0;">
 				<div class="container">
 					<div class="textbox-group">
 						<div class="row">
@@ -119,10 +115,10 @@
 
 								<!-- textbox -->
 								<div class="textbox">
-									<div class="textbox__image"><a href="#"><img src="assets/img/job-bath/IMG_7251.JPG"
+									<div class="textbox__image"><a href="project-detail.html?project=kitchen1" class="project-link"><img src="assets/img/projects/kitchen1/mainafter.JPG"
 												alt="" /></a></div>
 									<div class="textbox__body">
-										<h2 class="textbox__title"><a href="#">Free template</a></h2>
+										<h2 class="textbox__title"><a href="project-detail.html?project=kitchen1" class="project-link">Kitchen Remodel</a></h2>
 										<div class="textbox__description">Lorem ipsum dolor sit amet, consectetur
 											adipiscing elit. Ut laoreet ut lacus a tincidunt. Quisque lu</div>
 									</div>
@@ -133,10 +129,10 @@
 
 								<!-- textbox -->
 								<div class="textbox">
-									<div class="textbox__image"><a href="#"><img src="assets/img/job-cabnets/cabnets.JPG"
+									<div class="textbox__image"><a href="project-detail.html?project=cabinets2" class="project-link"><img src="assets/img/projects/cabinets2/index.JPG"
 												alt="" /></a></div>
 									<div class="textbox__body">
-										<h2 class="textbox__title"><a href="#">Responsive Layout</a></h2>
+										<h2 class="textbox__title"><a href="project-detail.html?project=cabinets2" class="project-link">Custom Wardrobe</a></h2>
 										<div class="textbox__description">Nam elit ligula, egestas et ornare non,
 											viverra eu justo. Aliquam ornare lectus ut pharetra dictum. </div>
 									</div>
@@ -147,10 +143,10 @@
 
 								<!-- textbox -->
 								<div class="textbox">
-									<div class="textbox__image"><a href="#"><img src="assets/img/job-longCab/IMG_8600.JPG"
+									<div class="textbox__image"><a href="project-detail.html?project=kitchen3" class="project-link"><img src="assets/img/projects/kitchen3/index.JPG"
 												alt="" /></a></div>
 									<div class="textbox__body">
-										<h2 class="textbox__title"><a href="#">SEO Optimized</a></h2>
+										<h2 class="textbox__title"><a href="project-detail.html?project=kitchen3" class="project-link">Living Room Center Piece</a></h2>
 										<div class="textbox__description">Mauris lacinia venenatis dolor sit amet
 											viverra. Integer malesuada nulla neque. Sed rutrum ligula eu</div>
 									</div>
@@ -163,7 +159,33 @@
 			</section>
 			<!-- End / home -->
 
-			<!-- About-->
+			
+
+			<!-- work -->
+			<section id="work-sect" class="md-section">
+				<div class="container">
+					<div class="grid-css grid-css--masonry" data-col-lg="3" data-col-md="2" data-col-sm="2"
+						data-col-xs="1" data-gap="30">
+						<div class="filter">
+							<ul class="filter__list">
+								<li><a href="#" data-filter="*">All</a></li>
+								<li><a href="#" data-filter=".kitchens">Kitchens</a></li>
+								<li><a href="#" data-filter=".bathrooms">Bathrooms</a></li>
+								<li><a href="#" data-filter=".cabinets">Cabinets</a></li>
+								<li><a href="#" data-filter=".commercial">Commercial</a></li>
+							</ul>
+						</div>
+						<div class="grid__inner" id="work-grid">
+							<div class="grid-sizer"></div>
+							
+						</div>
+					</div>
+					<div class="text-center"><a class="btn btn-primary btn-w180" href="#">Load more</a></div>
+				</div>
+			</section>
+			<!-- End / wrok -->
+
+<!-- About-->
 			<section id="abt-sect" class="md-section consult-background">
 				<div name='abt-sect' class="container">
 					<div class="row">
@@ -233,178 +255,6 @@
 			</section>
 			<!-- End / About -->
 
-			<!-- work -->
-			<section id="work-sect" class="md-section">
-				<div class="container">
-					<div class="grid-css grid-css--masonry" data-col-lg="3" data-col-md="2" data-col-sm="2"
-						data-col-xs="1" data-gap="30">
-						<div class="filter">
-							<ul class="filter__list">
-								<li><a href="#" data-filter="*">All</a></li>
-								<li><a href="#" data-filter=".kitchens">Kitchens</a></li>
-								<li><a href="#" data-filter=".bathrooms">Bathrooms</a></li>
-								<li><a href="#" data-filter=".cabinets">Cabinets</a></li>
-								<li><a href="#" data-filter=".commerical">Commerical</a></li>
-							</ul>
-						</div>
-						<div class="grid__inner">
-							<div class="grid-sizer"></div>
-							<div class="grid-item kitchens">
-								<div class="grid-item__inner">
-									<div class="grid-item__content-wrapper">
-										<!-- post-02 -->
-										<div id="project-kitchen1" class="post-02">
-											<div class="post-02__media"><img
-														src="assets/img/job-kitchen/IMG_9443.JPG" alt="" /></a></div>
-											<div class="post-02__body">
-												<h2 class="post-02__title">Custom White Wood Kitchen</a></h2>
-												<div class="post-02__department">Kitchen Remodel</div>
-											</div>
-										</div><!-- End / post-02 -->
-
-									</div>
-								</div>
-							</div>
-							<div class="grid-item commerical">
-								<div class="grid-item__inner">
-									<div class="grid-item__content-wrapper">
-										<!-- post-02 -->
-										<div class="post-02">
-											<div class="post-02__media"><a href="project-detail.html"><img
-														src="assets/img/job-restraunt/IMG_7179.JPG" alt="" /></a></div>
-											<div class="post-02__body">
-												<h2 class="post-02__title"><a href="project-detail.html">Butcher's Block for Italian Restruant Sammie's</a></h2>
-												<div class="post-02__department">Commerical</div>
-											</div>
-										</div><!-- End / post-02 -->
-
-									</div>
-								</div>
-							</div>
-							<div class="grid-item cabinets">
-								<div class="grid-item__inner">
-									<div class="grid-item__content-wrapper">
-
-										<!-- post-02 -->
-										<div class="post-02">
-											<div class="post-02__media"><a href="project-detail.html"><img
-														src="assets/img/job-longCab/IMG_8600.JPG" alt="" /></a></div>
-											<div class="post-02__body">
-												<h2 class="post-02__title"><a href="project-detail.html"> __ wood Cabinet</a></h2>
-												<div class="post-02__department">Cabinet</div>
-											</div>
-										</div><!-- End / post-02 -->
-
-									</div>
-								</div>
-							</div>
-							<div class="grid-item bathrooms">
-								<div class="grid-item__inner">
-									<div class="grid-item__content-wrapper">
-
-										<!-- post-02 -->
-										<div class="post-02">
-											<div class="post-02__media"><a href="project-detail.html"><img
-														src="assets/img/job-bath2/IMG_6990.JPG" alt="" /></a></div>
-											<div class="post-02__body">
-												<h2 class="post-02__title"><a href="project-detail.html">Modern Wood Bathroom</a></h2>
-												<div class="post-02__department">Bathrooms</div>
-											</div>
-										</div><!-- End / post-02 -->
-
-									</div>
-								</div>
-							</div>
-							<div class="grid-item kitchen">
-								<div class="grid-item__inner">
-									<div class="grid-item__content-wrapper">
-										<!-- post-02 -->
-										<div class="post-02">
-											<div class="post-02__media"><a href="project-detail.html"><img
-														src="assets/img/job-kitchen3/IMG_7531.JPG" alt="" /></a></div>
-											<div class="post-02__body">
-												<h2 class="post-02__title"><a href="project-detail.html">Kitchen Remodel</a></h2>
-												<div class="post-02__department">Kitchens</div>
-											</div>
-										</div><!-- End / post-02 -->
-
-									</div>
-								</div>
-							</div>
-							<div class="grid-item bathrooms">
-								<div class="grid-item__inner">
-									<div class="grid-item__content-wrapper">
-
-										<!-- post-02 -->
-										<div class="post-02">
-											<div class="post-02__media"><a href="project-detail.html"><img
-														src="assets/img/job-bath/IMG_7253.JPG" alt="" /></a></div>
-											<div class="post-02__body">
-												<h2 class="post-02__title"><a href="project-detail.html">White Tiled Bathroom</a></h2>
-												<div class="post-02__department">Bathrooms</div>
-											</div>
-										</div><!-- End / post-02 -->
-
-									</div>
-								</div>
-							</div>
-							<div class="grid-item online-marketing">
-								<div class="grid-item__inner">
-									<div class="grid-item__content-wrapper">
-
-										<!-- post-02 -->
-										<div class="post-02">
-											<div class="post-02__media"><a href="project-detail.html"><img
-														src="assets/img/job-kitchen4/IMG_8330.JPG" alt="" /></a></div>
-											<div class="post-02__body">
-												<h2 class="post-02__title"><a href="project-detail.html">Modern Kitchen</a></h2>
-												<div class="post-02__department">Kitchens</div>
-											</div>
-										</div><!-- End / post-02 -->
-
-									</div>
-								</div>
-							</div>
-							
-							<div class="grid-item cabinets">
-								<div class="grid-item__inner">
-									<div class="grid-item__content-wrapper">
-
-										<!-- post-02 -->
-										<div id="project_"class="post-02">
-											<div class="post-02__media"><img
-														src="assets/img/job-cabnets2/IMG_6799.JPG" alt="" /></a></div>
-											<div class="post-02__body">
-												<h2 class="post-02__title">Custom __ Wood Credenza</a></h2>
-												<div class="post-02__department">Cabinets</div>
-											</div>
-										</div><!-- End / post-02 -->
-
-									</div>
-								</div>
-							</div>
-							<div class="grid-item cabinets">
-								<div class="grid-item__inner">
-									<div class="grid-item__content-wrapper">
-
-										<!-- post-02 -->
-										<div class="post-02">
-											<div class="post-02__media"><a href="project-detail.html"><img
-														src="assets/img/job-cabnets/cabnets.JPG" alt="" /></a></div>
-											<div class="post-02__body">
-												<h2 class="post-02__title"><a href="project-detail.html">Wordrobe Cabinet</a></h2>
-												<div class="post-02__department">Cabinets</div>
-											</div>
-										</div><!-- End / post-02 -->
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="text-center"><a class="btn btn-primary btn-w180" href="#">Load more</a></div>
-				</div>
-			</section>
-			<!-- End / wrok -->
 
 			<!-- refs -->
 			<section id="refs-sect" class="md-section" style="padding-bottom:0;">
@@ -427,7 +277,7 @@
 							<!-- testimonial -->
 							<div class="testimonial">
 								<div class="testimonial__info"><a class="testimonial__avatar" href="#"><img
-											src="" alt="" /></a>
+											src="assets/img/projects/bath1/index.JPG" alt="" /></a>
 									<h5 class="testimonial__name">Alice</h5><span
 										class="testimonial__position">Bathroom Remodel</span>
 								</div>
@@ -442,7 +292,7 @@
 							<!-- testimonial -->
 							<div class="testimonial">
 								<div class="testimonial__info"><a class="testimonial__avatar" href="#"><img
-											src="assets/img/job-kitchen/mainafter.jpg" alt="" /></a>
+											src="assets/img/projects/kitchen1/mainafter.JPG" alt="" /></a>
 									<h5 class="testimonial__name">Brumley</h5><span
 										class="testimonial__position">Kitchen Remodel</span>
 								</div>
@@ -457,7 +307,7 @@
 							<!-- testimonial -->
 							<div class="testimonial">
 								<div class="testimonial__info"><a class="testimonial__avatar" href="#"><img
-											src="" alt="" /></a>
+											src="assets/img/projects/cabinets2/index.JPG" alt="" /></a>
 									<h5 class="testimonial__name">m</h5><span
 										class="testimonial__position">Custom Cabinet</span>
 								</div>

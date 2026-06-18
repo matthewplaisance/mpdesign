@@ -3769,7 +3769,8 @@ mark, .mark {
 
 .header.shrink {
     position: fixed;
-    background-color: white;
+    background-color: #3a3a44; /* complementary dark grey so the white nav text
+                                  stays readable once the header turns solid */
 }
 
 .header.shrink .header__logo {
@@ -4357,6 +4358,8 @@ mark, .mark {
 
 .slider__item {
     height: 100vh;
+    height: 100svh; /* iOS Safari: use the *small* viewport height so the hero
+                       isn't hidden behind the address bar / doesn't jump on scroll */
     text-align: center;
 }
 
@@ -4666,3 +4669,189 @@ mark, .mark {
     bottom: 50px;
     position: absolute;
 }
+
+
+/* somewhere in your stylesheet */
+.slider__item {
+    width: 100%;
+    min-height: 300px;       /* ← make sure it’s not collapsing */
+    background-size: cover;
+    background-position: center;
+  }
+
+/* ---- Quality-of-life tweaks ---- */
+
+/* Show a pointer cursor on interactive elements. Several of these (the nav
+   items, search toggle, hamburger) are <a>/<div> with no href, so the browser
+   would otherwise show the default text/arrow cursor. */
+.consult-menu a,
+.filter__list a,
+.project-link,
+.search-form__toggle,
+.navbar-toggle,
+.owl-dot,
+.btn,
+.back-to-top,
+#back-to-top {
+    cursor: pointer;
+}
+
+/* Gentle hover feedback on text links and nav items. */
+.consult-menu a,
+.filter__list a {
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.consult-menu a:hover,
+.filter__list a:hover {
+    opacity: 0.7;
+}
+
+/* Project detail — the shared .slider__item is full viewport height (100vh),
+   which pushed the project title below the fold on load. Give the detail-page
+   carousel a shorter height and pull the content card up a little more so the
+   title is visible without scrolling. Scoped to .consult-projectDetail so the
+   homepage hero stays full-height. */
+.consult-projectDetail .slider__item {
+    height: 60vh;
+    min-height: 360px;
+}
+
+@media (min-width: 992px) {
+    .consult-projectDetail__main {
+        margin-top: -140px;
+    }
+}
+
+/* ---- iPhone / small-screen optimizations ---- */
+
+/* Never let a stray wide element create sideways scroll on a phone. */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* Content images always scale down to their container instead of overflowing. */
+img {
+    max-width: 100%;
+}
+
+/* Momentum scrolling + a subtle tap highlight on iOS touch. */
+body {
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 767px) {
+    /* Scale the full-screen hero text down so it fits a phone cleanly. */
+    .slider__content h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .slider__content p {
+        font-size: 14px;
+    }
+
+    /* Breathing room between the homepage cards once they stack vertically. */
+    .textbox-group .textbox {
+        margin-bottom: 30px;
+    }
+
+    /* Shorter before/after carousel on phones so the detail text shows sooner. */
+    .consult-projectDetail .slider__item {
+        height: 55vh;
+        height: 55svh;
+        min-height: 280px;
+    }
+
+    /* Bigger, easier-to-tap category filter chips. */
+    .filter__list a {
+        display: inline-block;
+        padding: 8px 12px;
+    }
+}
+
+/* Keep the white nav text/icons readable once the header turns solid grey on
+   scroll. The base theme only whitens them over the hero (:not(.shrink)), so
+   re-assert white (and the hamburger bars) for the shrunk state. */
+.header__style-02.shrink .consult-nav .consult-menu > li > a,
+.header__style-02.shrink .search-form__toggle {
+    color: #fff;
+}
+
+.header__style-02.shrink .consult-nav .consult-menu .current-menu-item > a {
+    color: #f39c12;
+}
+
+.header__style-02.shrink .navbar-toggle > span {
+    background-color: #fefefe;
+}
+
+/* Text logo (replaces logo3.png). Inline so the parent .header__logo line-height
+   centers it vertically in both the tall and shrunk header. White reads over the
+   hero and on the grey scrolled bar. */
+.header__logo-link {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.header__logo-link:hover,
+.header__logo-link:focus {
+    color: #f39c12; /* orange accent on hover, matching the active nav item */
+}
+
+@media (max-width: 767px) {
+    .header__logo-link {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+}
+
+/* Mobile: drop the search icon and put the menu button in its top-right slot.
+   The header container collapses (all children float), so the button height is
+   pinned to the logo bar height and flex-centered rather than measured off the
+   container — otherwise top:50% lands at ~0 and pushes the button off-screen. */
+@media (max-width: 992px) {
+    .header .header__toogleGroup {
+        display: none;
+    }
+
+    .header .consult-nav {
+        position: static;
+        float: none;
+        padding: 0;
+    }
+
+    .header .consult-nav .navbar-toggle {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        height: 100px;
+        margin: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-transform: none;
+                transform: none;
+        z-index: 1001;
+    }
+
+    /* Stay aligned with the logo when the header shrinks on scroll. */
+    .header.shrink .navbar-toggle {
+        height: 60px;
+    }
+}
+  
